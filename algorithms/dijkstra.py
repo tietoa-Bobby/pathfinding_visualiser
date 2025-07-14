@@ -34,17 +34,17 @@ def dijkstra_algorithm(draw, grid, start, end):
             start.make_start()
             return True
 
-        for neighbor in current.neighbors:
+        for neighbour in current.neighbours:
             temp_g_score = g_score[current] + 1
 
-            if temp_g_score < g_score[neighbor]:
-                came_from[neighbor] = current
-                g_score[neighbor] = temp_g_score
-                if neighbor not in open_set_hash:
+            if temp_g_score < g_score[neighbour]:
+                came_from[neighbour] = current
+                g_score[neighbour] = temp_g_score
+                if neighbour not in open_set_hash:
                     count += 1
-                    open_set.put((g_score[neighbor], count, neighbor))
-                    open_set_hash.add(neighbor)
-                    neighbor.make_open()
+                    open_set.put((g_score[neighbour], count, neighbour))
+                    open_set_hash.add(neighbour)
+                    neighbour.make_open()
 
         draw()
 

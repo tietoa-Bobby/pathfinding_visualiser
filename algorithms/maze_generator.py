@@ -44,15 +44,15 @@ def generate_maze(draw, grid):
 
         current = stack[-1]
 
-        # Find unvisited neighbors (2 cells away)
+        # Find unvisited neighbours (2 cells away)
         row, col = current.get_pos()
 
-        potential_neighbors = [
+        potential_neighbours = [
             (row - 2, col), (row + 2, col), (row, col - 2), (row, col + 2)
         ]
-        random.shuffle(potential_neighbors)
+        random.shuffle(potential_neighbours)
 
-        for r, c in potential_neighbors:
+        for r, c in potential_neighbours:
             if 0 <= r < len(grid) and 0 <= c < len(grid[0]) and grid[r][c] not in visited:
                 next_node = grid[r][c]
                 remove_wall(current, next_node, grid)
@@ -60,7 +60,7 @@ def generate_maze(draw, grid):
                 visited.add(next_node)
                 stack.append(next_node)
                 break
-        else:  # If no unvisited neighbor was found
+        else:  # If no unvisited neighbour was found
             stack.pop()
 
         draw()

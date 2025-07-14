@@ -28,13 +28,13 @@ def dfs_algorithm(draw, grid, start, end):
             start.make_start()
             return True
 
-        # Reverse neighbors to make visualization more intuitive (e.g., explores down before up)
-        for neighbor in reversed(current.neighbors):
-            if neighbor not in visited:
-                came_from[neighbor] = current
-                visited.add(neighbor)
-                open_set.append(neighbor)
-                neighbor.make_open()
+        # Reverse neighbours to make visualization more intuitive (e.g., explores down before up)
+        for neighbour in reversed(current.neighbours):
+            if neighbour not in visited:
+                came_from[neighbour] = current
+                visited.add(neighbour)
+                open_set.append(neighbour)
+                neighbour.make_open()
 
         draw()
 
