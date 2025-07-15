@@ -1,3 +1,6 @@
+[![License](https://img.shields.io/github/license/tietoa-Bobby/pathfinding_visualiser?style=flat-square)](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.x-blue?style=flat-square)](https://www.python.org/)
+
 # Pathfinding Algorithm Visualiser
 
 A Python application built with Pygame to visualise various pathfinding algorithms. This tool provides an interactive grid where you can set a start point, an end point, and barriers to see how different algorithms find the shortest path.
